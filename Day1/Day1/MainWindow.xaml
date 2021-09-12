@@ -7,6 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <WrapPanel Name="wpnl" >
+            <Button Height="23" Name="button1" Width="75" Margin="10">Wrap One</Button>
+            <Button Height="23" Name="button2" Width="75" Margin="10">Wrap Two</Button>
+            <Button Height="23" Name="button3" Width="75" Margin="10">Wrap Three</Button>
+            <Ellipse Fill="HotPink" Width="75" Height="23"/>
+        </WrapPanel>
+        <StackPanel Grid.Column ="1" Name="spnl" >
+            <Button Height="23" Name="button4" Width="75" Margin="10">Stack One</Button>
+            <Button Height="23" Name="button5" Width="75" Margin="10">Stack Two</Button>
+            <Button Height="23" Name="button6" Width="75" Margin="10">Stack Three</Button>
+            <Ellipse Fill="HotPink" Width="75" Height="23"/>
+        </StackPanel>
+        <DockPanel Grid.Row="1" Grid.Column="1" Name="dpnl" >
+            <Button DockPanel.Dock="Bottom" Height="23" Name="button7" Width="75" Margin="10">Dock One</Button>
+            <Button DockPanel.Dock="Top" Height="23" Name="button8" Width="75" Margin="10">Dock Two</Button>
+            <Button DockPanel.Dock="Right" Height="23" Name="button9" Width="75" Margin="10">Dock Three</Button>
+            <Ellipse Fill="HotPink" Width="75" Height="23"/>
+        </DockPanel>
+        <UniformGrid Grid.Row="1"  Name="wpnl1" >
+            <Button Height="23" Name="button10" Width="75" Margin="10">Uniform One</Button>
+            <Button Height="23" Name="button11" Width="75" Margin="10">Uniform Two</Button>
+            <Button Height="23" Name="button12" Width="75" Margin="10">Uniform Three</Button>
+            <Ellipse Fill="HotPink" Width="75" Height="23"/>
+        </UniformGrid>
     </Grid>
 </Window>
