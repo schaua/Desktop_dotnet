@@ -23,6 +23,22 @@ namespace Day1
         public MainWindow()
         {
             InitializeComponent();
+            mainContent.Content = this.Resources["layoutResource"];
+        }
+
+        private void ShowPanels(object sender, RoutedEventArgs e)
+        {
+            mainContent.Content = this.Resources["layoutResource"];
+        }
+
+        private void ShowExample(object sender, RoutedEventArgs e)
+        {
+            mainContent.Content = this.Resources["exampleResource"];
+        }
+
+        private void ShowPages(object sender, RoutedEventArgs e)
+        {
+            mainContent.Content = this.Resources["pageResource"];
         }
     }
 }
