@@ -24,5 +24,15 @@ namespace Day1
         {
             InitializeComponent();
         }
+
+        private void Element_Click(object sender, RoutedEventArgs e)
+        {
+            mainContent.Content = this.Resources["elementView"];
+        }
+
+        private void Property_Click(object sender, RoutedEventArgs e)
+        {
+            mainContent.Content = this.Resources["propertyView"];
+        }
     }
 }

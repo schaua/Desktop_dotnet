@@ -3,10 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Day1"
+        xmlns:local="clr-namespace:Day1" xmlns:views="clr-namespace:Day1.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <Window.Resources>
+        <views:ElementBindingView x:Key="elementView"/>
+        <views:PropertyBindingView x:Key="propertyView"/>
+    </Window.Resources>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Element Binding" Click="Element_Click"/>
+            <MenuItem Header="Property Binding" Click="Property_Click"/>
+        </Menu>
+        <ContentPresenter Name="mainContent" Content="{StaticResource elementView}" />
+    </DockPanel>
 </Window>
